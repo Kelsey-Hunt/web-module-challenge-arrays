@@ -91,12 +91,13 @@ Use the addFlavor function below to do the following:
 
 
 function addFlavor(oldMenu, newFlavor){
-  const addFlavorArray = [...oldMenu];
-  addFlavorArray.unshift(newFlavor);
-  return addFlavorArray;
+  oldMenu.unshift(newFlavor);
+  return oldMenu;
  }
 
-console.log(addFlavor(originalFlavors, ("Rainbow Sherbert")));
+addFlavor(originalFlavors, ("Rainbow Sherbert"));
+
+
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Houston, we have a problem! There are now 32 flavors in the originalFlavors array! Your task is to remove an item from the end of the array. 
@@ -110,10 +111,12 @@ Use the removeLastFlavor function below to do the following:
 */
 
 
-function removeLastFlavor(/*your code here*/){
- /*your code here*/
+function removeLastFlavor(tooManyFlavors){
+ const removeFlavor = tooManyFlavors.pop();
+ return tooManyFlavors;
 }
 
+removeLastFlavor(originalFlavors);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -128,10 +131,11 @@ Use the getFlavorByIndex function below to do the following:
 */
 
 
-function getFlavorByIndex(/*your code here*/){
-  /*your code here*/
+function getFlavorByIndex(flavorsList,index){
+  return flavorsList[index];
 }
 
+getFlavorByIndex(originalFlavors,2);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
