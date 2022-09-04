@@ -180,10 +180,18 @@ Use the filterByWord function below to do the following:
 */
 
 
-function filterByWord(/*your code here*/){
-  /*your code here*/
+function filterByWord(filterArray, filter){
+  const holidayFlavors = [];
+
+  for(let i = 0; i < filterArray.length; i++){
+    if(filterArray[i].includes(filter)){
+      holidayFlavors.push(filterArray[i]);
+    }
+  }
+  return holidayFlavors;
 }
 
+filterByWord(originalFlavors, ("Chocolate"));
 
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
