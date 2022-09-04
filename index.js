@@ -47,7 +47,8 @@ Use the copy function below to do the following:
 
 
 function copy(origArray){
-  const newArray = origArray.slice();
+  const newArray = [...origArray];
+  console.log(newArray);
   return newArray;
 }
 
@@ -65,7 +66,9 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 function is31Flavors(testArray){
-  if(testArray.length = 31){
+  const countArray = [...testArray];
+  let flavorCount = countArray.length;
+  if(flavorCount = 31){
     return true;
   } else {
     return false;
@@ -87,11 +90,13 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(/*your code here*/){
-  /*your code here*/
+function addFlavor(oldMenu, newFlavor){
+  const addFlavorArray = [...oldMenu];
+  addFlavorArray.unshift(newFlavor);
+  return addFlavorArray;
  }
 
-
+console.log(addFlavor(originalFlavors, ("Rainbow Sherbert")));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Houston, we have a problem! There are now 32 flavors in the originalFlavors array! Your task is to remove an item from the end of the array. 
